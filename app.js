@@ -23,3 +23,20 @@ function atualizarAmigos() {
 		lista.appendChild(nomeInserido);
 	}
 }
+
+function sortearAmigo() {
+	if (amigos.length === 0) {
+		alert('Por favor, insira amigos para sortear')
+		return
+	}
+    let indice = Math.floor(Math.random() * amigos.length)
+	
+	let amigoSorteado = amigos[indice];
+
+	resultado.innerHTML = '';
+	var li = document.createElement('li');
+	li.innerHTML = `${amigoSorteado}`;
+	resultado.appendChild(li);
+
+	console.log(amigoSorteado);
+}
